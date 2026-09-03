@@ -1,0 +1,110 @@
+[
+  {
+    "id": "T01",
+    "version": 1,
+    "type": "tool",
+    "name": "Hammer",
+    "quote": "A little tap can fix a big problem.",
+    "tags": ["Build", "Strike", "Craft"],
+    "image": "/cards/tools/hammer.png"
+  },
+  {
+    "id": "T02",
+    "version": 1,
+    "type": "tool",
+    "name": "Broom",
+    "quote": "Sweeps away trouble, one dust bunny at a time.",
+    "tags": ["Clean", "Tidy", "Sweep"],
+    "image": "/cards/tools/broom.png"
+  },
+  {
+    "id": "T03",
+    "version": 1,
+    "type": "tool",
+    "name": "Bucket",
+    "quote": "Ready to carry water, sand, or dreams.",
+    "tags": ["Carry", "Liquid", "Hold"],
+    "image": "/cards/tools/bucket.png"
+  },
+  {
+    "id": "T04",
+    "version": 1,
+    "type": "tool",
+    "name": "Cloth",
+    "quote": "Soft yet strong, for polish and patch.",
+    "tags": ["Clean", "Cover", "Wrap"],
+    "image": "/cards/tools/cloth.png"
+  },
+  {
+    "id": "T05",
+    "version": 1,
+    "type": "tool",
+    "name": "Key",
+    "quote": "Unlocks mystery and quiet doors.",
+    "tags": ["Unlock", "Access", "Secret"],
+    "image": "/cards/tools/key.png"
+  },
+  {
+    "id": "T06",
+    "version": 1,
+    "type": "tool",
+    "name": "Ladder",
+    "quote": "Step by step towards the sky.",
+    "tags": ["Climb", "Reach", "Elevation"],
+    "image": "/cards/tools/ladder.png"
+  },
+  {
+    "id": "T07",
+    "version": 1,
+    "type": "tool",
+    "name": "Lantern",
+    "quote": "Guiding light when paths grow dim.",
+    "tags": ["Light", "Guide", "Warmth"],
+    "image": "/cards/tools/lantern.png"
+  },
+  {
+    "id": "T08",
+    "version": 1,
+    "type": "tool",
+    "name": "Nails",
+    "quote": "Hold things together when worlds collide.",
+    "tags": ["Fasten", "Hold", "Join"],
+    "image": "/cards/tools/nails.png"
+  },
+  {
+    "id": "T09",
+    "version": 1,
+    "type": "tool",
+    "name": "Paint",
+    "quote": "Brings color to forgotten corners.",
+    "tags": ["Color", "Finish", "Protect"],
+    "image": "/cards/tools/paint.png"
+  },
+  {
+    "id": "T10",
+    "version": 1,
+    "type": "tool",
+    "name": "Rope",
+    "quote": "Strong enough to pull, bind, or climb.",
+    "tags": ["Tie", "Bind", "Rescue"],
+    "image": "/cards/tools/rope.png"
+  },
+  {
+    "id": "T11",
+    "version": 1,
+    "type": "tool",
+    "name": "Wheel",
+    "quote": "Keeps the village rolling forward.",
+    "tags": ["Move", "Transport", "Roll"],
+    "image": "/cards/tools/wheel.png"
+  },
+  {
+    "id": "T12",
+    "version": 1,
+    "type": "tool",
+    "name": "Wood Plank",
+    "quote": "The solid foundation of every honest fix.",
+    "tags": ["Build", "Structure", "Patch"],
+    "image": "/cards/tools/wood_plank.png"
+  }
+]

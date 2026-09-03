@@ -1,0 +1,47 @@
+[
+  {
+    "version": "v0.1.3",
+    "releaseDate": "2026-08-06",
+    "title": "Special Cards Expansion & Interactive Modals",
+    "changes": [
+      "Integrated all 8 official Special Cards (Lucky Find, Helping Hand, Second Chance, Borrowed Tool, Brilliant Idea, Hidden Toolbox, Wild Inspiration, Happy Accident).",
+      "Interactive SpecialCardPlayModal for card swaps, target player borrowing, custom wild declarations, and extra request selection.",
+      "Vibrant village-themed card visuals with distinct purple timing badges (Before Story, During Story, After Story).",
+      "Real-time visual indicators on the Village Board for borrowed tools, wild inspirations, and bonus requests.",
+      "Added dedicated Special Cards guide in the Rulebook modal."
+    ]
+  },
+  {
+    "version": "v0.1.2",
+    "releaseDate": "2026-08-05",
+    "title": "Event-Driven Engine & Analytics",
+    "changes": [
+      "Refactored game engine into pure event-sourced architecture with deterministic replay.",
+      "Added Game Analytics Engine with real-time statistics (Average Time, Popular Requests, Least Used Tools).",
+      "Added Special Cards Plugin system (Lucky Hammer, Silver Tongue).",
+      "Decoupled Socket.IO into a thin transport layer.",
+      "Added post-game 3-question player feedback prompt."
+    ]
+  },
+  {
+    "version": "v0.1.1",
+    "releaseDate": "2026-08-05",
+    "title": "Tactile Digital Tabletop UI",
+    "changes": [
+      "Tactile dark felt and polished wood design system with golden accents.",
+      "Fanned 5-card player hand dock with interactive multi-card selection.",
+      "Interactive 30-second Rulebook modal and live Village Activity Feed.",
+      "Host moderation tools for skipping AFK players and forcing phases."
+    ]
+  },
+  {
+    "version": "v0.1.0",
+    "releaseDate": "2026-08-04",
+    "title": "Initial FixIT Alpha Release",
+    "changes": [
+      "Core 24 Village Requests (10 Small, 10 Medium, 4 Large) and 12 Tool Cards catalog.",
+      "Authoritative Socket.IO turn lifecycle: Turn -> Storytelling -> Discussion -> Voting -> Results.",
+      "Room creation with 6-character room codes and shareable invitation links."
+    ]
+  }
+]

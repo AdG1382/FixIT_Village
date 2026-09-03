@@ -1,0 +1,98 @@
+[
+  {
+    "id": "SP01",
+    "version": 1,
+    "type": "special",
+    "name": "Lucky Find",
+    "timing": "BEFORE_STORY",
+    "timingLabel": "Before telling your story",
+    "pluginName": "LuckyFindPlugin",
+    "quote": "A hidden stash in the village brush!",
+    "description": "Draw 2 Tool cards. Keep 1, return the other to the bottom of the deck.",
+    "image": "/cards/special/SP01.png"
+  },
+  {
+    "id": "SP02",
+    "version": 1,
+    "type": "special",
+    "name": "Helping Hand",
+    "timing": "BEFORE_STORY",
+    "timingLabel": "Before telling your story",
+    "pluginName": "HelpingHandPlugin",
+    "quote": "Villagers always look out for one another.",
+    "description": "Ask any player for one Tool card. They may choose any card to give you.",
+    "image": "/cards/special/SP02.png"
+  },
+  {
+    "id": "SP03",
+    "version": 1,
+    "type": "special",
+    "name": "Second Chance",
+    "timing": "BEFORE_STORY",
+    "timingLabel": "Before telling your story",
+    "pluginName": "SecondChancePlugin",
+    "quote": "Fresh tools for a fresh perspective.",
+    "description": "Return any number of Tool cards from your hand to the deck. Shuffle the deck and draw the same number of cards.",
+    "image": "/cards/special/SP03.png"
+  },
+  {
+    "id": "SP04",
+    "version": 1,
+    "type": "special",
+    "name": "Borrowed Tool",
+    "timing": "BEFORE_STORY",
+    "timingLabel": "Before telling your story",
+    "pluginName": "BorrowedToolPlugin",
+    "quote": "Just returning it when the job is done!",
+    "description": "Use one Tool card from another player's hand for this story. Return the card to that player after scoring.",
+    "image": "/cards/special/SP04.png"
+  },
+  {
+    "id": "SP05",
+    "version": 1,
+    "type": "special",
+    "name": "Brilliant Idea",
+    "timing": "AFTER_STORY",
+    "timingLabel": "After telling your story, before scoring",
+    "pluginName": "BrilliantIdeaPlugin",
+    "quote": "Wait! I can use this too!",
+    "description": "After telling your story, add one extra Tool card from your hand to improve it before scoring.",
+    "image": "/cards/special/SP05.png"
+  },
+  {
+    "id": "SP06",
+    "version": 1,
+    "type": "special",
+    "name": "Hidden Toolbox",
+    "timing": "BEFORE_STORY",
+    "timingLabel": "Before telling your story",
+    "pluginName": "HiddenToolboxPlugin",
+    "quote": "Always keep a backup cache nearby.",
+    "description": "Immediately draw 3 Tool cards. Then discard 2 of them from your hand.",
+    "image": "/cards/special/SP06.png"
+  },
+  {
+    "id": "SP07",
+    "version": 1,
+    "type": "special",
+    "name": "Wild Inspiration",
+    "timing": "DURING_STORY",
+    "timingLabel": "While playing your Tool cards / during your story",
+    "pluginName": "WildInspirationPlugin",
+    "quote": "Imagination has no limits! Today this bucket is a hammer!",
+    "description": "Choose one Tool card in your hand. For this turn, it may represent any Tool card you need.",
+    "image": "/cards/special/SP07.png"
+  },
+  {
+    "id": "SP08",
+    "version": 1,
+    "type": "special",
+    "name": "Happy Accident",
+    "timing": "AFTER_STORY",
+    "timingLabel": "After choosing your main Village Request, before scoring",
+    "pluginName": "HappyAccidentPlugin",
+    "quote": "One fix leads to another!",
+    "description": "Complete one additional Small (5-point) Village Request using the same set of Tool cards. Tell one continuous story solving both.",
+    "image": "/cards/special/SP08.png"
+  }
+]
