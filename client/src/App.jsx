@@ -43,6 +43,18 @@ export function App() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
+  // Update document title dynamically based on active route
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (currentPath.startsWith('/matha-pacchi') || currentPath.startsWith('/mathapacchi')) {
+      document.title = 'Matha Pacchi — Aditya Gagare';
+    } else if (currentPath.startsWith('/fixit')) {
+      document.title = 'FixIT Village — Aditya Gagare';
+    } else {
+      document.title = 'Aditya Gagare — Games';
+    }
+  }, [currentPath]);
+
   const navigateTo = (path) => {
     if (typeof window !== 'undefined') {
       window.history.pushState(null, '', path);
