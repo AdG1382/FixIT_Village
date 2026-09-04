@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Maatha Pacchi Android Application</title>
-  <meta name="description" content="Official Privacy Policy for the Maatha Pacchi (माथा पच्ची) Android party game application.">
+  <title>Privacy Policy — Matha Pacchi</title>
+  <meta name="description" content="Official Privacy Policy for Matha Pacchi (माथा पच्ची) Android application. Matha Pacchi is an offline game, and your game data stays on your device.">
   <link rel="canonical" href="https://games.adityagagare.in/privacy.html">
+  <link rel="icon" type="image/png" href="/matha_pacchi_icon.png">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-page: #faf9f6;
       --card-bg: #ffffff;
       --card-highlight: #fef08a;
-      --accent-yellow: #f59e0b;
-      --border-dark: #111111;
+      --accent-yellow: #fbbf24;
       --text-dark: #111111;
+      --text-body: #2d3748;
       --text-muted: #55524a;
-      --code-bg: #f1f5f9;
-      --link-blue: #0284c7;
+      --border-dark: #111111;
+      --green-bg: #dcfce7;
+      --green-text: #14532d;
+      --blue-accent: #0284c7;
+      --focus-ring: #0284c7;
     }
 
     * {
@@ -35,22 +40,31 @@
       background-color: var(--bg-page);
       color: var(--text-dark);
       line-height: 1.65;
-      padding: 2rem 1rem 4rem;
+      padding: 1.25rem 1rem 3.5rem;
       display: flex;
       justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Accessibility focus states */
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
     .wrapper {
-      max-width: 860px;
+      max-width: 740px;
       width: 100%;
     }
 
+    /* Top Navigation Header */
     .top-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0.85rem;
       border-bottom: 1px solid #e2e0d8;
     }
 
@@ -58,60 +72,96 @@
       color: var(--text-dark);
       text-decoration: none;
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      text-transform: uppercase;
     }
 
     .top-nav a:hover {
       text-decoration: underline;
     }
 
+    /* Main Container Card */
     .privacy-card {
       background: var(--card-bg);
       border: 3px solid var(--border-dark);
       border-radius: 24px;
-      padding: 2.5rem 2rem;
+      padding: clamp(1.5rem, 5vw, 2.5rem);
       box-shadow: 6px 6px 0px var(--border-dark);
     }
 
-    h1 {
-      font-family: 'Fredoka', cursive, sans-serif;
-      font-size: clamp(2.2rem, 6vw, 3.2rem);
-      font-weight: 900;
-      color: var(--text-dark);
-      line-height: 1.1;
-      margin-bottom: 0.4rem;
+    /* 1. Header Section */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      margin-bottom: 1.25rem;
     }
 
-    .app-subtitle {
-      font-size: 1.1rem;
-      font-weight: 700;
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      border: 2.5px solid var(--border-dark);
+      box-shadow: 3px 3px 0px var(--border-dark);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .header-titles h1 {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 900;
+      color: var(--text-dark);
+      line-height: 1.05;
+    }
+
+    .header-titles .app-name {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
       color: #854d0e;
-      margin-bottom: 0.5rem;
+      margin-top: 0.15rem;
     }
 
     .date-badge {
       display: inline-block;
       background: #f1f5f9;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
       border: 1px solid #cbd5e1;
+      margin-bottom: 1.25rem;
+    }
+
+    .intro-banner {
+      background: var(--card-highlight);
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+      font-weight: 800;
+      color: #451a03;
+      line-height: 1.4;
       margin-bottom: 2rem;
     }
 
+    /* Section Styling */
     .section-block {
-      margin-top: 2.5rem;
+      margin-top: 2.2rem;
       padding-top: 1.8rem;
       border-top: 1px solid #e2e0d8;
     }
 
     .section-block:first-of-type {
-      margin-top: 1rem;
+      margin-top: 0;
       padding-top: 0;
       border-top: none;
     }
@@ -122,125 +172,251 @@
       font-weight: 900;
       color: var(--text-dark);
       margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-top: 1.25rem;
-      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
     }
 
     p {
       font-size: 1rem;
-      color: #334155;
+      color: var(--text-body);
       margin-bottom: 1rem;
       font-weight: 500;
     }
 
-    ul, ol {
-      margin-left: 1.4rem;
-      margin-bottom: 1.25rem;
-      color: #334155;
-    }
-
-    li {
-      margin-bottom: 0.4rem;
-      font-weight: 500;
-    }
-
-    .summary-box {
-      background: var(--card-highlight);
-      border: 2.5px solid var(--border-dark);
-      border-radius: 16px;
-      padding: 1.4rem;
-      box-shadow: 4px 4px 0px var(--border-dark);
-      margin-bottom: 1.5rem;
-    }
-
-    .summary-box ul {
-      margin-bottom: 0;
-    }
-
-    .summary-box li {
-      font-weight: 700;
-      color: #451a03;
-    }
-
-    /* Responsive Table Styles */
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      margin: 1.25rem 0;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border: 2px solid var(--border-dark);
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.92rem;
-    }
-
-    th, td {
-      padding: 0.8rem 1rem;
-      text-align: left;
-      border-bottom: 1px solid #cbd5e1;
-      border-right: 1px solid #e2e8f0;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f8fafc;
-      color: var(--text-dark);
-      font-weight: 800;
-      border-bottom: 2px solid var(--border-dark);
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    td:last-child, th:last-child {
-      border-right: none;
-    }
-
-    code {
-      font-family: monospace;
-      background: var(--code-bg);
-      color: #0284c7;
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    .contact-card {
-      background: #f0f9ff;
-      border: 2px solid #0284c7;
-      border-radius: 16px;
-      padding: 1.25rem;
+    /* 2. Privacy at a Glance Grid */
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
       margin-top: 1rem;
     }
 
-    .contact-card a {
-      color: #0284c7;
+    .glance-fact {
+      background: #f8fafc;
+      border: 2px solid var(--border-dark);
+      border-radius: 14px;
+      padding: 0.75rem 0.9rem;
+      box-shadow: 3px 3px 0px var(--border-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .glance-fact-icon {
+      width: 22px;
+      height: 22px;
+      background: #e2e8f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      color: #0f172a;
+    }
+
+    /* 3. What stays on your device */
+    .device-storage-list {
+      display: flex;
+      flexDirection: column;
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .storage-card {
+      background: #ffffff;
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.1rem 1.25rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+    }
+
+    .storage-card h3 {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .storage-card .details {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 0.4rem;
+    }
+
+    .storage-card .why-tag {
+      display: inline-block;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e40af;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 8px;
+    }
+
+    .prominent-statement {
+      background: var(--green-bg);
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+
+    .prominent-statement-text {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      font-weight: 900;
+      color: var(--green-text);
+      line-height: 1.3;
+    }
+
+    .prominent-statement-sub {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #166534;
+      margin-top: 0.35rem;
+      margin-bottom: 0;
+    }
+
+    /* 4. What Matha Pacchi does not collect (Checklist Grid) */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .checklist-item {
+      background: #fef2f2;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      padding: 0.6rem 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #991b1b;
+      box-shadow: 2px 2px 0px var(--border-dark);
+    }
+
+    .checklist-cross {
+      color: #dc2626;
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    /* 5. Motion Sensors Feature Box */
+    .sensor-box {
+      background: #f0f9ff;
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      margin-top: 1rem;
+    }
+
+    .tilt-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 0.85rem 0;
+    }
+
+    .tilt-badge {
+      flex: 1;
+      min-width: 140px;
+      background: #ffffff;
+      border: 2px solid var(--border-dark);
+      border-radius: 12px;
+      padding: 0.65rem 0.85rem;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 2.5px 2.5px 0px var(--border-dark);
+    }
+
+    .tilt-badge.correct {
+      color: #15803d;
+      border-left: 6px solid #16a34a;
+    }
+
+    .tilt-badge.pass {
+      color: #b45309;
+      border-left: 6px solid #d97706;
+    }
+
+    .tech-note {
+      font-size: 0.86rem;
+      color: #475569;
+      font-weight: 600;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 0.6rem 0.85rem;
+      margin-top: 0.85rem;
+    }
+
+    /* 6. Sharing Score Box */
+    .sharing-box {
+      background: #fefce8;
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      margin-top: 1rem;
+    }
+
+    /* 7. Internet Connection Box */
+    .offline-box {
+      background: var(--green-bg);
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      margin-top: 1rem;
+    }
+
+    .offline-title {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--green-text);
+      margin-bottom: 0.35rem;
+    }
+
+    /* 8. Contact Box */
+    .contact-box {
+      background: #ffffff;
+      border: 2.5px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      margin-top: 1rem;
+    }
+
+    .contact-box a {
+      color: var(--blue-accent);
       font-weight: 800;
       text-decoration: none;
     }
 
-    .contact-card a:hover {
+    .contact-box a:hover {
       text-decoration: underline;
     }
 
-    footer {
+    /* Footer & Navigation */
+    .page-footer {
       margin-top: 2rem;
       text-align: center;
       font-size: 0.88rem;
@@ -248,23 +424,52 @@
       font-weight: 600;
     }
 
-    footer a {
+    .page-footer a {
       color: var(--text-dark);
       text-decoration: none;
       font-weight: 700;
     }
 
-    @media (max-width: 600px) {
+    .back-btn {
+      display: inline-block;
+      background: var(--border-dark);
+      color: #ffffff;
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: 3px 3px 0px rgba(0,0,0,0.25);
+      margin-top: 1.5rem;
+      transition: transform 0.15s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Mobile Tweaks */
+    @media (max-width: 540px) {
       body {
-        padding: 1rem 0.5rem 2rem;
+        padding: 1rem 0.6rem 2.5rem;
       }
       .privacy-card {
-        padding: 1.5rem 1rem;
-        border-radius: 16px;
+        padding: 1.35rem 1rem;
+        border-radius: 18px;
       }
-      th, td {
-        padding: 0.65rem 0.6rem;
-        font-size: 0.85rem;
+      .app-header {
+        gap: 0.85rem;
+      }
+      .app-icon {
+        width: 52px;
+        height: 52px;
+      }
+      .glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .checklist-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -277,290 +482,195 @@
       <a href="https://adityagagare.in" target="_blank" rel="noopener noreferrer">adityagagare.in ↗</a>
     </nav>
 
-    <!-- Privacy Policy Document Container -->
+    <!-- Main Privacy Card -->
     <main class="privacy-card">
+      <!-- 1. HEADER SECTION -->
       <header>
-        <h1>Privacy Policy</h1>
-        <div class="app-subtitle">Maatha Pacchi (माथा पच्ची) Android Application</div>
-        <div class="date-badge">Last updated: 4 September 2026</div>
+        <div class="app-header">
+          <img src="/matha_pacchi_icon.png" alt="Matha Pacchi App Icon" class="app-icon">
+          <div class="header-titles">
+            <h1>Privacy Policy</h1>
+            <div class="app-name">Matha Pacchi (माथा पच्ची)</div>
+          </div>
+        </div>
+
+        <div class="date-badge">Last updated: 1 September 2026</div>
+
+        <div class="intro-banner">
+          Matha Pacchi is designed to work offline. Your game data stays on your device.
+        </div>
       </header>
 
-      <p style="font-size: 0.92rem; color: #64748b; font-weight: 600; font-style: italic;">
-        Notice: This Privacy Policy applies specifically to the Maatha Pacchi Android mobile application. For information regarding the games.adityagagare.in website infrastructure, see Section 14.
-      </p>
-
-      <!-- SECTION 1: AT A GLANCE -->
+      <!-- 2. PRIVACY AT A GLANCE -->
       <section class="section-block">
-        <h2>1. At a Glance</h2>
-        <div class="summary-box">
-          <ul>
-            <li><strong>No User Accounts:</strong> You do not need to register, sign in, or provide any personal details to play.</li>
-            <li><strong>Zero Data Collection:</strong> The app does not collect, track, or transmit your personal data.</li>
-            <li><strong>No Advertisements:</strong> The app contains no third-party ad networks or ad identifiers.</li>
-            <li><strong>No Analytics or Telemetry:</strong> There are no third-party tracking or crash-reporting SDKs installed.</li>
-            <li><strong>100% Local Gameplay:</strong> The app operates offline on your device and stores settings locally.</li>
-          </ul>
-        </div>
-        <p>
-          Maatha Pacchi is designed to be a self-contained party card game that respects user privacy.
-        </p>
-      </section>
+        <h2>Privacy at a Glance</h2>
+        <p>Quick facts about how Matha Pacchi protects your privacy:</p>
 
-      <!-- SECTION 2: INFORMATION WE COLLECT -->
-      <section class="section-block">
-        <h2>2. Information We Collect</h2>
-        <p>
-          <strong>The Maatha Pacchi Android application does not collect any personal information.</strong>
-        </p>
-        <p>
-          Specifically, the application does <strong>NOT</strong> collect or request:
-        </p>
-        <ul>
-          <li>Names or usernames</li>
-          <li>Email addresses or phone numbers</li>
-          <li>Account credentials or social media profiles</li>
-          <li>Unique device identifiers (Advertising ID, IMEI, MAC address)</li>
-          <li>IP addresses or network logs</li>
-          <li>Geographic location data (GPS or network-based)</li>
-          <li>Contacts or address book entries</li>
-          <li>Photos, videos, or media files</li>
-          <li>Microphone audio recordings or camera images</li>
-          <li>Gameplay telemetry, analytics, or crash reports</li>
-        </ul>
-      </section>
-
-      <!-- SECTION 3: INFORMATION STORED ONLY ON YOUR DEVICE -->
-      <section class="section-block">
-        <h2>3. Information Stored Only on Your Device</h2>
-        <p>
-          To provide a seamless experience between game rounds, Maatha Pacchi saves basic gameplay preferences locally on your device using Android's sandboxed storage (<code>AsyncStorage</code>).
-        </p>
-        <p>
-          The table below lists all data stored locally by the application:
-        </p>
-
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Data Type</th>
-                <th>Purpose</th>
-                <th>Where Stored</th>
-                <th>Transmitted Off Device?</th>
-                <th>When Deleted</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Game Settings</strong><br><code>@matha_pacchi_user_settings</code></td>
-                <td>Remembers your sound toggle, haptics toggle, chaos mode preference, tilt sensitivity ('low'|'medium'|'high'), touch fallback mode, and round duration (60s).</td>
-                <td>Local sandboxed Android app storage</td>
-                <td><strong>No</strong></td>
-                <td>When the app is uninstalled or app data is cleared in Android settings.</td>
-              </tr>
-              <tr>
-                <td><strong>High Scores</strong><br><code>@matha_pacchi_scores</code></td>
-                <td>Saves your highest score per deck so you can track personal records.</td>
-                <td>Local sandboxed Android app storage</td>
-                <td><strong>No</strong></td>
-                <td>When the app is uninstalled or app data is cleared in Android settings.</td>
-              </tr>
-              <tr>
-                <td><strong>Recent Decks</strong><br><code>@matha_pacchi_recent_decks</code></td>
-                <td>Saves a list of up to 5 recently played deck IDs for fast deck selection.</td>
-                <td>Local sandboxed Android app storage</td>
-                <td><strong>No</strong></td>
-                <td>When the app is uninstalled or app data is cleared in Android settings.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>
-          None of these stored data items leave your device. If you uninstall the application or tap "Clear Data" under Android App Info, all locally stored data is permanently removed.
-        </p>
-      </section>
-
-      <!-- SECTION 4: SENSORS AND DEVICE FEATURES -->
-      <section class="section-block">
-        <h2>4. Sensors and Device Features</h2>
-        <p>
-          Maatha Pacchi relies on your phone's hardware motion sensors to power hands-free tilt gameplay while holding the phone against your forehead.
-        </p>
-        <h3>Motion Sensors</h3>
-        <p>
-          The app uses <code>expo-sensors</code> (DeviceMotion / Accelerometer) and requests the Android permission <code>HIGH_SAMPLING_RATE_SENSORS</code> in the application build manifest.
-        </p>
-        <ul>
-          <li><strong>Purpose:</strong> To calculate real-time phone tilt angle (pitch) during an active round so the game can register when you tilt the phone DOWN (for Correct) or UP (for Pass).</li>
-          <li><strong>Data Handling:</strong> Sensor readings are processed temporarily in device memory during active rounds. Motion readings are <strong>never saved to disk, never logged, and never transmitted</strong> off the device.</li>
-        </ul>
-
-        <h3>Vibration Motor</h3>
-        <p>
-          The app requests the <code>VIBRATE</code> permission to trigger brief haptic vibration responses when a card is answered or passed. Haptics can be toggled on or off at any time in the app settings.
-        </p>
-      </section>
-
-      <!-- SECTION 5: CAMERA, MICROPHONE, PHOTOS, CONTACTS AND LOCATION -->
-      <section class="section-block">
-        <h2>5. Camera, Microphone, Photos, Contacts and Location</h2>
-        <p>
-          For total clarity, the table below documents the status of hardware permissions:
-        </p>
-
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Hardware / API Feature</th>
-                <th>Used by App?</th>
-                <th>Explanation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Camera</strong></td>
-                <td><strong>No</strong></td>
-                <td>The app does not request or access the camera.</td>
-              </tr>
-              <tr>
-                <td><strong>Microphone / Audio Recording</strong></td>
-                <td><strong>No</strong></td>
-                <td>The app does not request or record audio.</td>
-              </tr>
-              <tr>
-                <td><strong>Location (GPS / Network)</strong></td>
-                <td><strong>No</strong></td>
-                <td>The app does not request or access location data.</td>
-              </tr>
-              <tr>
-                <td><strong>Contacts / Address Book</strong></td>
-                <td><strong>No</strong></td>
-                <td>The app does not request or access contacts.</td>
-              </tr>
-              <tr>
-                <td><strong>Photos / Media / Files</strong></td>
-                <td><strong>No</strong></td>
-                <td>The app does not read or write your personal photos or files.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="glance-grid">
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No account</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No advertising</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No analytics</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No tracking</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No location tracking</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>No internet required</span>
+          </div>
+          <div class="glance-fact" style="grid-column: 1 / -1;">
+            <span class="glance-fact-icon">✓</span>
+            <span>Local storage only</span>
+          </div>
         </div>
       </section>
 
-      <!-- SECTION 6: INTERNET AND NETWORK ACCESS -->
+      <!-- 3. WHAT STAYS ON YOUR DEVICE -->
       <section class="section-block">
-        <h2>6. Internet and Network Access</h2>
-        <p>
-          <strong>All 13 content decks and 947 gameplay cards are bundled directly inside the application.</strong> The game does not connect to any remote server or external API to load cards or gameplay content.
-        </p>
-        <p>
-          <strong>Manifest Permission Note:</strong> The Android build configuration includes the standard <code>android.permission.INTERNET</code> permission (a default component of the Expo / React Native build toolchain). However, the application source code performs <strong>zero network requests</strong>, zero remote content fetching, and zero data uploads during normal gameplay operation.
-        </p>
-      </section>
+        <h2>What Stays on Your Device</h2>
+        <p>Matha Pacchi stores basic gameplay preferences locally on your phone so you can resume playing smoothly:</p>
 
-      <!-- SECTION 7: SHARING RESULTS -->
-      <section class="section-block">
-        <h2>7. Sharing Results</h2>
-        <p>
-          At the end of a round, you have the option to share your score card by tapping the "Share" button on the results screen.
-        </p>
-        <ul>
-          <li><strong>User-Initiated:</strong> Sharing occurs only if and when you explicitly tap the Share button.</li>
-          <li><strong>Android Share Sheet:</strong> Tapping Share hands a simple plain-text string (containing the deck title, score, and title earned) to Android's native system share menu.</li>
-          <li><strong>User Choice:</strong> You choose which application to share the text with (such as messaging or social apps). Maatha Pacchi does not choose the recipient or transmit data independently. Any third-party app you share to will handle that text under its own privacy policy.</li>
-        </ul>
-      </section>
+        <div class="device-storage-list">
+          <div class="storage-card">
+            <h3>Game settings</h3>
+            <div class="details">Sound, haptics, chaos mode, tilt sensitivity, round length, and touch controls.</div>
+            <div class="why-tag">Why: To remember your preferred way to play.</div>
+          </div>
 
-      <!-- SECTION 8: THIRD-PARTY SERVICES -->
-      <section class="section-block">
-        <h2>8. Third-Party Services</h2>
-        <p>
-          The Maatha Pacchi Android application does <strong>NOT</strong> integrate or bundle any third-party services that collect user data, including:
-        </p>
-        <ul>
-          <li>No advertising networks (e.g. AdMob, Unity Ads)</li>
-          <li>No analytics services (e.g. Google Analytics, Firebase Analytics)</li>
-          <li>No crash-reporting services (e.g. Sentry, Crashlytics)</li>
-          <li>No Google Play Billing SDKs (currently not integrated)</li>
-        </ul>
-      </section>
+          <div class="storage-card">
+            <h3>High scores</h3>
+            <div class="details">Your best score for each deck.</div>
+            <div class="why-tag">Why: So you can track and beat your records.</div>
+          </div>
 
-      <!-- SECTION 9: DATA RETENTION AND DELETION -->
-      <section class="section-block">
-        <h2>9. Data Retention and Deletion</h2>
-        <p>
-          Because all app data (settings, high scores, recent decks) is stored strictly on your local device, we do not maintain central servers or databases containing your data.
-        </p>
-        <p>
-          <strong>How to Delete Stored Data:</strong>
-        </p>
-        <ul>
-          <li>Uninstall the Maatha Pacchi app from your Android device; OR</li>
-          <li>Go to Android Settings &gt; Apps &gt; Maatha Pacchi &gt; Storage &gt; Clear Storage / Clear Data.</li>
-        </ul>
-        <p>
-          Performing either action instantly and permanently erases all locally saved settings and high scores.
-        </p>
-      </section>
+          <div class="storage-card">
+            <h3>Recently played decks</h3>
+            <div class="details">Your recently played content decks.</div>
+            <div class="why-tag">Why: So frequently played decks can appear first.</div>
+          </div>
+        </div>
 
-      <!-- SECTION 10: CHILDREN'S PRIVACY -->
-      <section class="section-block">
-        <h2>10. Children's Privacy</h2>
-        <p>
-          Maatha Pacchi is a family-friendly party game designed for players of all ages.
-        </p>
-        <p>
-          Because the application does not collect, request, or transmit any personal information from any user, it does not collect personal data from children under the age of 13 (or under applicable local legal ages).
-        </p>
-      </section>
-
-      <!-- SECTION 11: SECURITY -->
-      <section class="section-block">
-        <h2>11. Security</h2>
-        <p>
-          Your gameplay data remains secure because it never leaves your physical device. We do not store or manage personal data on external web servers or cloud databases. Local preferences are stored safely within Android's sandboxed application data directory.
-        </p>
-      </section>
-
-      <!-- SECTION 12: CHANGES TO THIS PRIVACY POLICY -->
-      <section class="section-block">
-        <h2>12. Changes to This Privacy Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time to reflect changes in application features or legal requirements. When updates occur, the "Last updated" date at the top of this policy will be updated accordingly.
-        </p>
-      </section>
-
-      <!-- SECTION 13: CONTACT -->
-      <section class="section-block">
-        <h2>13. Contact</h2>
-        <p>
-          If you have any questions or concerns regarding this Privacy Policy or the Maatha Pacchi application, please contact:
-        </p>
-        <div class="contact-card">
-          <p style="margin: 0; font-weight: 700; color: #0f172a;">Aditya Gagare</p>
-          <p style="margin: 0.2rem 0 0 0;">Email: <a href="mailto:hello@adityagagare.in">hello@adityagagare.in</a></p>
-          <p style="margin: 0.2rem 0 0 0;">Website: <a href="https://games.adityagagare.in" target="_blank" rel="noopener noreferrer">games.adityagagare.in</a></p>
+        <div class="prominent-statement">
+          <div class="prominent-statement-text">None of this data leaves your device.</div>
+          <p class="prominent-statement-sub">Deleting the app permanently removes this locally stored data.</p>
         </div>
       </section>
 
-      <!-- SECTION 14: WEBSITE PRIVACY & NAVIGATION -->
+      <!-- 4. WHAT MATHA PACCHI DOES NOT COLLECT -->
       <section class="section-block">
-        <h2>14. Website Infrastructure & Navigation</h2>
-        <p>
-          This policy specifically governs the Maatha Pacchi Android mobile app. The games.adityagagare.in website is hosted on standard web infrastructure (such as GitHub Pages / Nginx web servers) which may record standard web server logs (such as HTTP request IP addresses and user agents) strictly for network performance and security purposes.
+        <h2>What Matha Pacchi Does Not Collect</h2>
+        <p>The application does not collect, request, or store any of the following:</p>
+
+        <div class="checklist-grid">
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Names</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Email addresses</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Phone numbers</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Device identifiers</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Location data</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Contacts</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Photos</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Camera data</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Microphone data</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Analytics data</div>
+          <div class="checklist-item" style="grid-column: 1 / -1;"><span class="checklist-cross">✕</span> Advertising / tracking data</div>
+        </div>
+
+        <p style="font-weight: 600; color: #475569; margin-top: 0.75rem;">
+          Matha Pacchi does not make background network requests or connect to external tracking servers during gameplay.
         </p>
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <a href="/" style="display: inline-block; background: var(--border-dark); color: #ffffff; font-family: 'Fredoka', cursive; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; box-shadow: 3px 3px 0px rgba(0,0,0,0.2);">
-            ← Back to Games Showcase
-          </a>
+      </section>
+
+      <!-- 5. MOTION SENSORS -->
+      <section class="section-block">
+        <h2>Motion Sensors</h2>
+        <p>
+          Matha Pacchi uses your phone's motion sensors while you are playing with the phone held against your forehead.
+        </p>
+
+        <div class="sensor-box">
+          <p style="font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">
+            The sensors allow the game to detect gameplay actions in real-time:
+          </p>
+
+          <div class="tilt-actions">
+            <div class="tilt-badge correct">
+              Tilt forward → Correct
+            </div>
+            <div class="tilt-badge pass">
+              Tilt backward → Pass
+            </div>
+          </div>
+
+          <p style="font-size: 0.95rem; font-weight: 600; color: #334155; margin: 0.5rem 0 0;">
+            Sensor readings are processed temporarily in memory during active rounds and are never recorded, logged, or stored to disk.
+          </p>
+
+          <div class="tech-note">
+            <strong>Technical Note:</strong> On Android, high-frequency motion sensor access requires the <code>android.permission.HIGH_SAMPLING_RATE_SENSORS</code> permission in the application manifest to ensure responsive tilt detection.
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SHARING YOUR SCORE -->
+      <section class="section-block">
+        <h2>Sharing Your Score</h2>
+        <div class="sharing-box">
+          <p style="font-weight: 600; color: #451a03; margin-bottom: 0.75rem;">
+            When you tap <strong>Share</strong> on the results screen, Matha Pacchi creates a small text summary containing the relevant game result (such as the deck title, score achieved, and title earned).
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 600; color: #78350f; margin-bottom: 0.75rem;">
+            The app passes that text summary directly to your device's normal system sharing interface. You choose whether to share it and which application or person receives it.
+          </p>
+          <p style="font-size: 0.9rem; font-weight: 800; color: #92400e; margin: 0;">
+            Matha Pacchi itself does not upload, publish, or transmit your game results anywhere.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. INTERNET CONNECTION -->
+      <section class="section-block">
+        <h2>Internet Connection</h2>
+        <div class="offline-box">
+          <div class="offline-title">Matha Pacchi does not require an internet connection to play.</div>
+          <p style="font-size: 0.98rem; font-weight: 600; color: #166534; margin: 0;">
+            All 13 content decks and 947 cards are bundled directly inside the application package. You can play completely offline anywhere—on flights, road trips, or off-grid living rooms.
+          </p>
+        </div>
+      </section>
+
+      <!-- 8. CONTACT -->
+      <section class="section-block">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <p style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">
+            If you have any questions or feedback regarding privacy in Matha Pacchi, feel free to get in touch:
+          </p>
+          <p style="font-size: 1.05rem; font-weight: 800; margin: 0;">
+            Email: <a href="mailto:hello@adityagagare.in">hello@adityagagare.in</a>
+          </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.75rem;">
+          <a href="/" class="back-btn">← Back to Games Showcase</a>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="page-footer">
       © 2026 Aditya Gagare • <a href="https://adityagagare.in" target="_blank" rel="noopener noreferrer">adityagagare.in</a>
     </footer>
   </div>
