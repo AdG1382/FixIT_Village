@@ -407,6 +407,106 @@ export function PortfolioHomePage({ onNavigateMathaPacchi, onNavigateFixit }) {
               </span>
             </div>
           </div>
+
+          {/* CARD 3: ANTARMAN (dark stealth card, static game served at /antarman/) */}
+          <div>
+            <a
+              href="/antarman/"
+              style={{
+                background: '#0b1220',
+                border: '4px solid #111111',
+                borderRadius: '28px',
+                boxShadow: '8px 8px 0px #111111',
+                padding: 'clamp(1.5rem, 4vw, 2.5rem)',
+                cursor: 'pointer',
+                textDecoration: 'none',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                gap: '1.75rem',
+                alignItems: 'center'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.2rem', flexWrap: 'wrap' }}>
+                  <span className="status-badge" style={{ background: '#00e5ff', color: '#0b1220' }}>
+                    2026 · STEALTH FPS · EARLY PLAYTEST
+                  </span>
+                </div>
+
+                <h3 style={{
+                  fontFamily: "'Fredoka', cursive, sans-serif",
+                  fontSize: 'clamp(2.2rem, 6vw, 3rem)',
+                  fontWeight: 900,
+                  color: '#ffffff',
+                  lineHeight: 1,
+                  marginBottom: '0.35rem',
+                  letterSpacing: '0.04em'
+                }}>
+                  ANTARMAN
+                </h3>
+
+                <p style={{
+                  fontFamily: "'Fredoka', cursive, sans-serif",
+                  fontSize: 'clamp(1.1rem, 3.5vw, 1.3rem)',
+                  fontWeight: 800,
+                  color: '#ff8ae8',
+                  marginBottom: '0.9rem'
+                }}>
+                  Watch. Wait. Reach into their minds.
+                </p>
+
+                <p style={{
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  color: '#c9d6ea',
+                  lineHeight: 1.55,
+                  marginBottom: '1.6rem'
+                }}>
+                  A first-person stealth game set in the Himalayan foothills, 2018. Study guard routines, nudge a soldier's thoughts or take over his body, with Myra guiding you by radio. Keyboard and mouse.
+                </p>
+
+                <span
+                  style={{
+                    background: '#00e5ff',
+                    color: '#0b1220',
+                    fontFamily: "'Fredoka', cursive, sans-serif",
+                    fontWeight: 900,
+                    fontSize: '1rem',
+                    padding: '0.8rem 1.5rem',
+                    borderRadius: '9999px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem'
+                  }}
+                >
+                  PLAY IN BROWSER
+                  <ArrowRight size={18} />
+                </span>
+              </div>
+
+              <div style={{ textAlign: 'center' }}>
+                <img
+                  src="/antarman_cover.jpg"
+                  alt="ANTARMAN: a guard at the Tango Relay Station gate at night"
+                  style={{
+                    maxHeight: '240px',
+                    width: 'auto',
+                    maxWidth: '100%',
+                    objectFit: 'contain',
+                    borderRadius: '18px',
+                    border: '3.5px solid #00e5ff',
+                    boxShadow: '5px 5px 0px #000000'
+                  }}
+                />
+              </div>
+            </a>
+
+            <div style={{ marginTop: '0.6rem', paddingLeft: '0.5rem' }}>
+              <span className="handwritten-note">
+                ↑ Mission 1 only so far, for desktop keyboard and mouse
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -559,6 +659,10 @@ export function PortfolioHomePage({ onNavigateMathaPacchi, onNavigateFixit }) {
           <button onClick={onNavigateFixit} style={{ background: 'none', border: 'none', color: '#66635b', fontWeight: 600, cursor: 'pointer' }}>
             FixIT
           </button>
+          <span>•</span>
+          <a href="/antarman/" style={{ color: '#66635b', textDecoration: 'none', fontWeight: 600 }}>
+            ANTARMAN
+          </a>
           <span>•</span>
           <a href="https://adityagagare.in" target="_blank" rel="noopener noreferrer" style={{ color: '#66635b', textDecoration: 'none' }}>
             adityagagare.in
