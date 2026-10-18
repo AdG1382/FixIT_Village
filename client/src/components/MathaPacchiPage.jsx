@@ -9,12 +9,61 @@ import {
   Copy,
   Check,
   Download,
-  FileCode,
-  Globe,
   Layers,
   Mail,
   ExternalLink
 } from 'lucide-react';
+
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=games.adityagagare.mathapacchi';
+
+const SCREENSHOTS = [
+  { src: '/matha-pacchi/01_home.jpg', alt: 'Matha Pacchi home screen' },
+  { src: '/matha-pacchi/02_gameplay.jpg', alt: 'A card during a round, with tilt controls' },
+  { src: '/matha-pacchi/03_chaos.jpg', alt: 'Chaos Mode rules striking mid-round' },
+  { src: '/matha-pacchi/04_decks.jpg', alt: 'Deck picker with 12 decks' },
+  { src: '/matha-pacchi/05_deck.jpg', alt: 'Bollywood Chaos deck details' },
+  { src: '/matha-pacchi/06_results.jpg', alt: 'Results screen with score' },
+  { src: '/matha-pacchi/07_rules.jpg', alt: 'The seven chaos rules' },
+  { src: '/matha-pacchi/08_unlock.jpg', alt: 'Unlock all decks screen' },
+];
+
+const FREE_DECKS = [
+  ['🏠', 'Daily Desi Chaos', 'power cuts, cooker whistles, "Shaadi kab karoge?"'],
+  ['🏏', 'Cricket Chaos', 'gully rules, helicopter shots, iconic moments'],
+  ['🪣', 'Household Objects', 'everyday things, surprisingly hard to explain'],
+  ['🦚', 'Animals & Birds', 'roar, chirp and flap your way to victory'],
+];
+
+const PREMIUM_DECKS = [
+  ['🎬', 'Bollywood Chaos', 'heroes, villains and famous dialogues'],
+  ['🤣', 'Cult Comedy', 'Hera Pheri, Welcome, Golmaal and more'],
+  ['📼', '2000s Nostalgia', 'Shaktimaan, Beyblade, Nokia 3310'],
+  ['🌍', 'Duniya Gol Hai', 'world wonders and famous places'],
+  ['🇮🇳', 'Bharat Ka Gyaan', 'landmarks, achievements, festivals'],
+  ['🔬', 'Science Ka Chakkar', 'physics to biology, easy to brain-melting'],
+  ['🏛️', 'Itihaas Ke Panne', 'rulers, revolutions, strange history'],
+  ['🧠', 'Brainrot Chaos', 'Italian brainrot and Gen Z slang'],
+];
+
+const DECK_GRID = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+  gap: '0.75rem',
+  fontSize: '0.92rem',
+  color: '#3b0764',
+  fontWeight: 700,
+  listStyleType: 'none',
+  padding: 0,
+  margin: 0
+};
+
+const DECK_ITEM = {
+  background: '#ffffff',
+  border: '2px solid #000',
+  borderRadius: '12px',
+  padding: '0.65rem 0.85rem',
+  boxShadow: '3px 3px 0px #000'
+};
 
 export function MathaPacchiPage({ onNavigateHome }) {
   const [copiedPrivacy, setCopiedPrivacy] = useState(false);
@@ -184,7 +233,7 @@ export function MathaPacchiPage({ onNavigateHome }) {
             What it is
           </h2>
           <p style={{ fontSize: '1.05rem', color: '#1e293b', lineHeight: 1.65, fontWeight: 600, margin: 0 }}>
-            An offline, in-person party guessing game crafted specifically for Indian living rooms, hostel corridors, and family gatherings. Hold the phone to your forehead in landscape orientation while your friends act out, sing, and shout clues!
+            An offline, in-person party guessing game made for Indian living rooms, hostel rooms, road trips and family functions. Hold the phone to your forehead in landscape while your friends act out, sing and shout clues. Tilt down when you get it, tilt up to pass.
           </p>
         </div>
 
@@ -204,122 +253,127 @@ export function MathaPacchiPage({ onNavigateHome }) {
           </div>
         </div>
 
-        {/* 5. THE EXPERIENCE (DECKS & GAME VISUALS) */}
+        {/* 5. SCREENSHOTS */}
+        <div style={{ marginBottom: '2.5rem' }}>
+          <h2 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.55rem', fontWeight: 900, color: '#000', marginBottom: '1rem', textAlign: 'left' }}>
+            Inside the game
+          </h2>
+          <div style={{
+            display: 'flex',
+            gap: '1rem',
+            overflowX: 'auto',
+            paddingBottom: '0.9rem',
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch'
+          }}>
+            {SCREENSHOTS.map((shot) => (
+              <img
+                key={shot.src}
+                src={shot.src}
+                alt={shot.alt}
+                loading="lazy"
+                width={540}
+                height={960}
+                style={{
+                  width: 'clamp(170px, 42vw, 230px)',
+                  height: 'auto',
+                  flexShrink: 0,
+                  scrollSnapAlign: 'start',
+                  borderRadius: '16px',
+                  border: '3px solid #000',
+                  boxShadow: '4px 4px 0px #000'
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* 6. DECKS */}
         <div className="comic-card" style={{ padding: 'clamp(1.4rem, 4vw, 2rem)', marginBottom: '2.2rem', textAlign: 'left', background: '#faf5ff' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
             <Layers size={24} style={{ color: '#9333ea' }} />
             <h2 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.55rem', fontWeight: 900, color: '#000', margin: 0 }}>
-              13 Content Decks (947 Cards)
+              12 Decks · 845 Cards
             </h2>
           </div>
+          <p style={{ fontSize: '0.98rem', color: '#3b0764', fontWeight: 600, marginBottom: '1.2rem' }}>
+            Every card is written for desi groups. Chaos Mode adds surprise rules mid-round: act only, one word only, whisper, sing it out.
+          </p>
 
-          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-            <img
-              src="/matha_pacchi_cover.jpg"
-              alt="Maatha Pacchi Artwork"
-              style={{
-                maxHeight: '260px',
-                width: 'auto',
-                maxWidth: '100%',
-                objectFit: 'contain',
-                borderRadius: '16px',
-                border: '3px solid #000',
-                boxShadow: '4px 4px 0px #000'
-              }}
-            />
-          </div>
+          <h3 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.1rem', fontWeight: 900, color: '#15803d', margin: '0 0 0.6rem' }}>
+            Free to play
+          </h3>
+          <ul style={DECK_GRID}>
+            {FREE_DECKS.map(([emoji, name, blurb]) => (
+              <li key={name} style={DECK_ITEM}>{emoji} <strong>{name}</strong> — {blurb}</li>
+            ))}
+          </ul>
 
-          <ul style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '0.75rem',
-            fontSize: '0.92rem',
-            color: '#3b0764',
-            fontWeight: 700,
-            listStyleType: 'none',
-            padding: 0
-          }}>
-            <li style={{ background: '#ffffff', border: '2px solid #000', borderRadius: '12px', padding: '0.65rem 0.85rem', boxShadow: '3px 3px 0px #000' }}>
-              🏘️ <strong>Padosi Sitcom Chaos</strong> — Jethalal, Daya Bhabhi
-            </li>
-            <li style={{ background: '#ffffff', border: '2px solid #000', borderRadius: '12px', padding: '0.65rem 0.85rem', boxShadow: '3px 3px 0px #000' }}>
-              🤣 <strong>Cult Comedy Blockbusters</strong> — Hera Pheri, Welcome
-            </li>
-            <li style={{ background: '#ffffff', border: '2px solid #000', borderRadius: '12px', padding: '0.65rem 0.85rem', boxShadow: '3px 3px 0px #000' }}>
-              🕵️ <strong>Desi Detective Drama</strong> — CID Inspector Daya
-            </li>
-            <li style={{ background: '#ffffff', border: '2px solid #000', borderRadius: '12px', padding: '0.65rem 0.85rem', boxShadow: '3px 3px 0px #000' }}>
-              👵🏽 <strong>Desi Mom's Survival Guide</strong> — Flying Chappal
-            </li>
+          <h3 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.1rem', fontWeight: 900, color: '#7e22ce', margin: '1.4rem 0 0.6rem' }}>
+            Premium decks
+          </h3>
+          <ul style={DECK_GRID}>
+            {PREMIUM_DECKS.map(([emoji, name, blurb]) => (
+              <li key={name} style={DECK_ITEM}>{emoji} <strong>{name}</strong> — {blurb}</li>
+            ))}
           </ul>
         </div>
 
-        {/* 6. GET IT / PLAY IT */}
+        {/* 7. GET IT */}
         <div className="comic-card" style={{ padding: 'clamp(1.5rem, 4vw, 2rem)', marginBottom: '2.2rem', textAlign: 'center', background: '#fbbf24' }}>
           <h2 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.9rem', fontWeight: 900, color: '#000', marginBottom: '0.4rem' }}>
-            Get Maatha Pacchi
+            Get Matha Pacchi
           </h2>
           <p style={{ fontSize: '0.98rem', fontWeight: 800, color: '#000', marginBottom: '1.2rem' }}>
-            Google Play listing releasing soon for Android devices!
+            Free on Google Play for Android. Offline, no ads, no sign-up.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.4rem' }}>
             <a
-              href="https://play.google.com"
+              href={PLAY_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="comic-btn-yellow"
               style={{ background: '#000000', color: '#ffffff' }}
             >
               <Download size={20} />
-              Get it on Google Play (Coming Soon)
+              Get it on Google Play
             </a>
           </div>
 
-          <div style={{ background: '#ffffff', border: '2.5px solid #000', borderRadius: '14px', padding: '0.9rem 1.1rem', textAlign: 'left', boxShadow: '4px 4px 0px #000' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#0284c7', fontWeight: 900, fontSize: '0.92rem', marginBottom: '0.3rem' }}>
-              <ShieldCheck size={18} />
-              Privacy Policy URL (Google Play Store Submission):
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-              <code style={{ fontSize: '0.85rem', fontWeight: 800, color: '#0369a1', wordBreak: 'break-all' }}>
-                {privacyUrl}
-              </code>
-              <div style={{ display: 'flex', gap: '0.4rem' }}>
-                <button
-                  onClick={handleCopyPrivacy}
-                  className="comic-badge"
-                  style={{ cursor: 'pointer', background: '#f0f9ff' }}
-                >
-                  {copiedPrivacy ? <Check size={14} style={{ color: '#10b981' }} /> : <Copy size={14} />}
-                  {copiedPrivacy ? 'Copied!' : 'Copy Link'}
-                </button>
-                <a
-                  href="/privacy.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="comic-badge"
-                  style={{ textDecoration: 'none', background: '#f0f9ff' }}
-                >
-                  Open Policy
-                  <ExternalLink size={12} />
-                </a>
-              </div>
-            </div>
+          <div style={{ background: '#ffffff', border: '2.5px solid #000', borderRadius: '14px', padding: '1rem 1.1rem', textAlign: 'left', boxShadow: '4px 4px 0px #000' }}>
+            <p style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.15rem', fontWeight: 900, color: '#000', margin: '0 0 0.4rem' }}>
+              4 decks free. Unlock all 12 for ₹249, once.
+            </p>
+            <p style={{ fontSize: '0.92rem', fontWeight: 600, color: '#334155', lineHeight: 1.55, margin: '0 0 0.6rem' }}>
+              One-time purchase, no subscription. Or share the game with five friends on WhatsApp to try every premium deck free for 24 hours.
+            </p>
+            <p style={{ fontSize: '0.82rem', fontWeight: 600, color: '#64748b', lineHeight: 1.5, margin: 0 }}>
+              Payments are processed by Google Play. For any issue with a charge, refund or payment method, please contact Google Play support. Purchases can be restored on any device signed in to the same Google account.
+            </p>
           </div>
-        </div>
 
-        {/* 7. WHAT'S NEXT */}
-        <div className="comic-card" style={{ padding: '1.6rem', marginBottom: '3rem', textAlign: 'left', background: '#fef3c7' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.3rem' }}>
-            <FileCode size={22} style={{ color: '#b45309' }} />
-            <h3 style={{ fontFamily: "'Fredoka', cursive", fontSize: '1.25rem', fontWeight: 900, color: '#78350f', margin: 0 }}>
-              What's Next
-            </h3>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1.1rem' }}>
+            <a
+              href="/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="comic-badge"
+              style={{ textDecoration: 'none', background: '#ffffff' }}
+            >
+              <ShieldCheck size={14} />
+              Privacy Policy
+              <ExternalLink size={12} />
+            </a>
+            <button
+              onClick={handleCopyPrivacy}
+              className="comic-badge"
+              style={{ cursor: 'pointer', background: '#ffffff' }}
+            >
+              {copiedPrivacy ? <Check size={14} style={{ color: '#10b981' }} /> : <Copy size={14} />}
+              {copiedPrivacy ? 'Copied!' : 'Copy policy link'}
+            </button>
           </div>
-          <p style={{ fontSize: '0.95rem', color: '#92400e', fontWeight: 700, margin: 0 }}>
-            Building the custom <code>.deck</code> ecosystem so players can create, share, and import their own community card decks!
-          </p>
         </div>
       </div>
 
@@ -347,7 +401,7 @@ export function MathaPacchiPage({ onNavigateHome }) {
             Games
           </button>
           <span>•</span>
-          <span style={{ fontWeight: 800, color: '#111111' }}>Maatha Pacchi</span>
+          <span style={{ fontWeight: 800, color: '#111111' }}>Matha Pacchi</span>
           <span>•</span>
           <a href="https://adityagagare.in" target="_blank" rel="noopener noreferrer" style={{ color: '#66635b', textDecoration: 'none' }}>
             adityagagare.in

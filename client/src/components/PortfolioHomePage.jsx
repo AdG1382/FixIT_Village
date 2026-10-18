@@ -296,7 +296,7 @@ export function PortfolioHomePage({ onNavigateMathaPacchi, onNavigateFixit }) {
 
             <div style={{ marginTop: '0.6rem', paddingLeft: '0.5rem' }}>
               <span className="handwritten-note">
-                ↑ 947+ cards across 13 Indian pop-culture decks
+                ↑ 845 cards across 12 desi decks · free on Google Play
               </span>
             </div>
           </div>

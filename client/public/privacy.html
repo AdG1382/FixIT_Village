@@ -357,6 +357,7 @@
     }
 
     .tech-note {
+      overflow-wrap: anywhere;
       font-size: 0.86rem;
       color: #475569;
       font-weight: 600;
@@ -494,7 +495,7 @@
           </div>
         </div>
 
-        <div class="date-badge">Last updated: 1 September 2026</div>
+        <div class="date-badge">Last updated: 19 October 2026</div>
 
         <div class="intro-banner">
           Matha Pacchi is designed to work offline. Your game data stays on your device.
@@ -529,11 +530,15 @@
           </div>
           <div class="glance-fact">
             <span class="glance-fact-icon">✓</span>
-            <span>No internet required</span>
+            <span>No internet needed to play</span>
           </div>
-          <div class="glance-fact" style="grid-column: 1 / -1;">
+          <div class="glance-fact">
             <span class="glance-fact-icon">✓</span>
             <span>Local storage only</span>
+          </div>
+          <div class="glance-fact">
+            <span class="glance-fact-icon">✓</span>
+            <span>Payments handled by Google Play</span>
           </div>
         </div>
       </section>
@@ -546,7 +551,7 @@
         <div class="device-storage-list">
           <div class="storage-card">
             <h3>Game settings</h3>
-            <div class="details">Sound, haptics, chaos mode, tilt sensitivity, round length, and touch controls.</div>
+            <div class="details">Sound, haptics, chaos mode, tilt sensitivity, tilt direction, round length, and touch controls.</div>
             <div class="why-tag">Why: To remember your preferred way to play.</div>
           </div>
 
@@ -560,6 +565,12 @@
             <h3>Recently played decks</h3>
             <div class="details">Your recently played content decks.</div>
             <div class="why-tag">Why: So frequently played decks can appear first.</div>
+          </div>
+
+          <div class="storage-card">
+            <h3>Unlock status</h3>
+            <div class="details">Whether you have bought the full game, and when a 24-hour shared trial ends.</div>
+            <div class="why-tag">Why: So premium decks stay unlocked without asking you again.</div>
           </div>
         </div>
 
@@ -585,11 +596,12 @@
           <div class="checklist-item"><span class="checklist-cross">✕</span> Camera data</div>
           <div class="checklist-item"><span class="checklist-cross">✕</span> Microphone data</div>
           <div class="checklist-item"><span class="checklist-cross">✕</span> Analytics data</div>
-          <div class="checklist-item" style="grid-column: 1 / -1;"><span class="checklist-cross">✕</span> Advertising / tracking data</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Advertising / tracking data</div>
+          <div class="checklist-item"><span class="checklist-cross">✕</span> Payment or card details</div>
         </div>
 
         <p style="font-weight: 600; color: #475569; margin-top: 0.75rem;">
-          Matha Pacchi does not make background network requests or connect to external tracking servers during gameplay.
+          Matha Pacchi does not make background network requests or connect to external tracking servers. The only connection it makes is to the Google Play app on your device, to check or complete an in-app purchase.
         </p>
       </section>
 
@@ -624,12 +636,34 @@
         </div>
       </section>
 
+      <!-- IN-APP PURCHASES -->
+      <section class="section-block">
+        <h2>In-App Purchases</h2>
+        <p>
+          Four decks are free. The remaining decks can be unlocked with a one-time in-app purchase.
+        </p>
+        <div class="sharing-box">
+          <p style="font-weight: 600; color: #451a03; margin-bottom: 0.75rem;">
+            All purchases are processed by <strong>Google Play Billing</strong>. Your payment details are entered into, and stored by, Google Play. Matha Pacchi never receives or stores your name, card number, UPI ID, or any other payment information.
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 600; color: #78350f; margin-bottom: 0.75rem;">
+            The app only receives confirmation from Google Play that the purchase was completed, and saves an "unlocked" flag on your device. When you reinstall the app or tap <strong>Restore Purchase</strong>, the app asks Google Play whether your signed-in Google account owns the unlock.
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 600; color: #78350f; margin-bottom: 0.75rem;">
+            Google's handling of your purchase data is covered by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>. For any issue with a charge, refund, or payment method, please contact Google Play support.
+          </p>
+          <p style="font-size: 0.9rem; font-weight: 800; color: #92400e; margin: 0;">
+            Free 24-hour trial: when you share Matha Pacchi with friends, the app opens WhatsApp (or your phone's share menu) with an invitation message. The app cannot see who you send it to, and nothing about the share is recorded except the time your trial ends.
+          </p>
+        </div>
+      </section>
+
       <!-- 6. SHARING YOUR SCORE -->
       <section class="section-block">
         <h2>Sharing Your Score</h2>
         <div class="sharing-box">
           <p style="font-weight: 600; color: #451a03; margin-bottom: 0.75rem;">
-            When you tap <strong>Share</strong> on the results screen, Matha Pacchi creates a small text summary containing the relevant game result (such as the deck title, score achieved, and title earned).
+            When you tap <strong>Share</strong> on the results screen, Matha Pacchi creates a small text summary containing the relevant game result (such as the deck title, score achieved, and title earned) and a link to the game on Google Play.
           </p>
           <p style="font-size: 0.95rem; font-weight: 600; color: #78350f; margin-bottom: 0.75rem;">
             The app passes that text summary directly to your device's normal system sharing interface. You choose whether to share it and which application or person receives it.
@@ -644,9 +678,9 @@
       <section class="section-block">
         <h2>Internet Connection</h2>
         <div class="offline-box">
-          <div class="offline-title">Matha Pacchi does not require an internet connection to play.</div>
+          <div class="offline-title">Matha Pacchi does not need an internet connection to play.</div>
           <p style="font-size: 0.98rem; font-weight: 600; color: #166534; margin: 0;">
-            All 13 content decks and 947 cards are bundled directly inside the application package. You can play completely offline anywhere—on flights, road trips, or off-grid living rooms.
+            All 12 decks and 845 cards are bundled inside the app. You can play completely offline anywhere: on flights, road trips, or off-grid living rooms. A connection is only needed through Google Play when you buy or restore the full game.
           </p>
         </div>
       </section>
